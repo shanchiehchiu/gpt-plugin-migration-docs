@@ -1,4 +1,11 @@
+---
+layout: default
+title: GPT 外掛程式遷移說明
+---
+
 # GPT 外掛程式遷移說明
+
+<p class="byline">2026-10-04</p>
 
 本文件說明：為什麼要把現有的「自訂 GPT」改成「外掛程式」，以及大致的製作方向。實作上的技術細節都放在對應的 repo 裡，這裡只講脈絡與判斷。
 
@@ -11,14 +18,14 @@ ChatGPT 的「我的 GPT」清單裡出現通知：**12 月 11 日前**沒有遷
 
 OpenAI 要求遷移，主要是想收斂到這套共通標準，並讓外掛能做更多事（例如回傳互動畫面、處理登入驗證），不只是單純呼叫 API 拿資料。
 
-對我們的實際影響：**現在用 Actions 包出來給 GPT 用的功能，都要換一套做法重新包裝**，才能繼續被 ChatGPT 使用。
+> 對我們的實際影響：**現在用 Actions 包出來給 GPT 用的功能，都要換一套做法重新包裝**，才能繼續被 ChatGPT 使用。
 
 ## 兩個可用的現成工具
 
 遷移的實作可以用下面兩個現成的套件（皆為 MIT 授權，細節請直接看 repo）：
 
-- https://github.com/shanchiehchiu/laravel-mcp-adapter
-- https://github.com/shanchiehchiu/laravel-mcp-oauth-adapter
+- [laravel-mcp-adapter](https://github.com/shanchiehchiu/laravel-mcp-adapter)
+- [laravel-mcp-oauth-adapter](https://github.com/shanchiehchiu/laravel-mcp-oauth-adapter)
 
 簡單分工：
 
